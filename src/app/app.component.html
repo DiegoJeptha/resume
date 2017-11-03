@@ -1,20 +1,111 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="md-padding">
+  <div fxLayout="wrap">
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="10" fxFlex="0"></div>
+    <div fxFlex>
+      <section id="head">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary header">{{name}}</span>
+            </mat-card-title>
+          </mat-card-header>
+        </mat-card>
+      </section>
 
+      <section id="contact" fxLayout="row">
+        <mat-card fxFlex="33">
+          <mat-card-header>
+            <mat-card-title>
+              <span>
+                <i class="colour-primary material-icons">contact_mail</i>
+              </span>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content fxFlex="80">
+            <p>{{contact.address.addr1}}</p>
+            <p *ngIf="contact.address.addr2">{{contact.address.addr2}}</p>
+            <p>{{contact.address.city}}, {{contact.address.province}}</p>
+            <p>{{contact.address.postal}}</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="33">
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">
+                <i class="material-icons">contact_phone</i>
+              </span>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              <i class="material-icons">phone_in_talk</i> {{contact.phone.main}}
+            </p>
+            <p>
+              <i class="material-icons">phone_forwarded</i> {{contact.phone.alternate}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="34">
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">
+                <i class="material-icons">language</i>
+              </span>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              <i class="material-icons">mail</i>
+              {{contact.digital.email}}
+            </p>
+            <p>{{contact.digital.github}}</p>
+          </mat-card-content>
+        </mat-card>
+      </section>
+
+      <section id="summary">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">Summary</span>
+              <hr/>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            {{summaryText}}
+          </mat-card-content>
+        </mat-card>
+      </section>
+
+      <section id="skill" fxLayout="row">
+        <mat-card fxFlex="55">
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">Experience</span>
+              <hr/>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{skillText}}</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="45">
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary"></span>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              <li *ngFor="let skill of skillList">
+                <span class="colour-primary">{{skill.content.title}}</span>
+                <span>: {{skill.content.items.join()}}</span>
+              </li>
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </section>
+    </div>
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="10" fxFlex="0"></div>
+  </div>
+</div>

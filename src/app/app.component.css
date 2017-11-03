@@ -1,0 +1,13 @@
+.header {
+    font-size: 350%;
+    font-style: italic;
+}
+
+.mat-card-title {
+    font-size: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mat-card-title > span > i {
+    font-size: 150%;
+}
