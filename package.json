@@ -10,6 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "repository": {
+    "type": "Github",
+    "url": "https://github.com/wildpyro/resume.git"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.4.6",
