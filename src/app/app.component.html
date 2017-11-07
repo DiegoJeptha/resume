@@ -5,8 +5,8 @@
       <section id="head">
         <mat-card>
           <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary header">{{name}}</span>
+            <mat-card-title class="colour-primary header">
+              {{name}}
             </mat-card-title>
           </mat-card-header>
         </mat-card>
@@ -17,7 +17,7 @@
           <mat-card-header>
             <mat-card-title>
               <span>
-                <i class="colour-primary material-icons">contact_mail</i>
+                <mat-icon class="colour-primary material-icons">contact_mail</mat-icon>
               </span>
             </mat-card-title>
           </mat-card-header>
@@ -32,16 +32,16 @@
           <mat-card-header>
             <mat-card-title>
               <span class="colour-primary">
-                <i class="material-icons">contact_phone</i>
+                <mat-icon>contact_phone</mat-icon>
               </span>
             </mat-card-title>
           </mat-card-header>
           <mat-card-content>
             <p>
-              <i class="material-icons">phone_in_talk</i> {{contact.phone.main}}
+              <mat-icon>phone_in_talk</mat-icon> {{contact.phone.main}}
             </p>
             <p>
-              <i class="material-icons">phone_forwarded</i> {{contact.phone.alternate}}
+              <mat-icon>phone_forwarded</mat-icon> {{contact.phone.alternate}}
             </p>
           </mat-card-content>
         </mat-card>
@@ -49,16 +49,18 @@
           <mat-card-header>
             <mat-card-title>
               <span class="colour-primary">
-                <i class="material-icons">language</i>
+                <mat-icon>language</mat-icon>
               </span>
             </mat-card-title>
           </mat-card-header>
           <mat-card-content>
             <p>
-              <i class="material-icons">mail</i>
+              <mat-icon>mail</mat-icon>
               {{contact.digital.email}}
             </p>
-            <p>{{contact.digital.github}}</p>
+            <p>
+              <mat-icon svgIcon="github"></mat-icon>
+              {{contact.digital.github}}</p>
           </mat-card-content>
         </mat-card>
       </section>
@@ -103,6 +105,63 @@
               </li>
             </p>
           </mat-card-content>
+        </mat-card>
+      </section>
+
+      <section id="work-history">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title class="colour-primary">
+              Work History
+              <hr/>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div *ngFor="let work of workhistories">
+              <span class="colour-primary item-header">{{work.content.title}} ~ {{work.content.company}}</span>
+              <p class="item-header-detail">
+                {{work.content.location}} - {{work.content.dateRange}}
+              </p>
+              <p *ngIf="work.content.text">{{work.content.text}}</p>
+              <p *ngIf="work.content.accomplishments">{{work.content.accomplishments}}</p>
+              <br/>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </section>
+
+      <section id="education">
+        <mat-card *ngFor="let education of educations">
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">{{education.content.course}}</span>
+              <p class="section-header-detail">
+                {{education.content.school}} - {{education.content.graduationYear}}
+              </p>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content *ngIf="education.content.summary">
+            <div>
+              <span class="colour-primary education-header">{{education.content.course}}</span>
+              <p>
+                {{education.content.summary}}
+              </p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </section>
+
+      <section id="references">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <span class="colour-primary">References</span>
+              <hr/>
+              <p class="section-header-detail">
+                Available upon request.
+              </p>
+            </mat-card-title>
+          </mat-card-header>
         </mat-card>
       </section>
     </div>
