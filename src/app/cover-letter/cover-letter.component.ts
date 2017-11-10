@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-import { Contact, Address, Digital, Phone } from "../contact.class";
+import { AboutMeInterface } from "../about-me-interface";
+import { ContactInterface } from "../contact-interface";
 
 @Component({
   selector: "app-cover-letter",
@@ -9,13 +11,24 @@ import { Contact, Address, Digital, Phone } from "../contact.class";
 })
 export class CoverLetterComponent implements OnInit {
 
-  name = "Ben Zundel";
-  contact: Contact;
+  name: string;
+  aboutMe: AboutMeInterface;
+  contact: ContactInterface;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    // this.contact = new Contact();
+    this.http.get("./assets/about-me.json")
+      .toPromise()
+      .then(response => {
+        this.aboutMe = response as AboutMeInterface;
+      });
+
+    this.http.get("./assets/contact.json")
+      .toPromise()
+      .then(response => {
+        this.contact = response as ContactInterface;
+      });
   }
 
 }

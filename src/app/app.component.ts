@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 import { AboutMeInterface } from "./about-me-interface";
-import { ContactInterface } from "./contact.class";
-import { SkillInterface, SkillListInterface } from "./skills.class";
-import { WorkhistoryInterface } from "./workhistory.class";
-import { EducationInterface } from "./education.class";
+import { ContactInterface } from "./contact-interface";
+import { SkillInterface, SkillListInterface } from "./skills-interface";
+import { WorkhistoryInterface } from "./work-history-interface";
+import { EducationInterface } from "./education-interface";
 
 @Component({
   selector: "app-root",
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
         this.contact = response as ContactInterface;
       });
 
-    this.http.get("./assets/workhistory.json")
+    this.http.get("./assets/work-history.json")
       .toPromise()
       .then(response => {
         this.workhistories = response as WorkhistoryInterface[];
