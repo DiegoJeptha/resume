@@ -1,28 +1,6 @@
-
-mat-card-title > span > mat-icon {
-    font-size: 150%;
-}
-
-mat-card {
-    margin: 10px, 10px, 10px;
-}
-
-mat-card-content {
-    padding-left: 10px;
-}
-
-.mat-card-title {
-    font-size: 150%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .header {
     font-size: 275%;
     font-style: italic;
-}
-
-.work-header {
-    font-size: 125%;
 }
 
 .item-header {
@@ -32,4 +10,25 @@ mat-card-content {
 .item-header-detail {
     font-style: italic;
     color: darkslategray;
+}
+
+.negate-pad-left {
+    margin-left: -20px;
+}
+
+.negate-pad-top {
+    margin-top: -10px;
+}
+
+.mat-card-title {
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skill-header {
+    font-size: 115%;
+}
+
+.work-header {
+    font-size: 115%;
 }

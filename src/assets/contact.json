@@ -1,0 +1,20 @@
+{
+    "name": "",
+    "address": {
+        "addr1": "",
+        "addr2": "",
+        "postal": "",
+        "city": "",
+        "province": "",
+        "contry": ""
+    },
+    "phone": {
+        "main": "",
+        "alternate": ""
+    },
+    "digital": {
+        "email": "",
+        "github": "",
+        "website": ""
+    }
+}

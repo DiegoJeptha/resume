@@ -1,89 +1,95 @@
 <div class="md-padding">
-  <div fxLayout="wrap">
+  <div *ngIf="contact && workhistories && educations" fxLayout="wrap">
     <div fxFlex.gt-lg="25" fxFlex.gt-md="10" fxFlex="0"></div>
     <div fxFlex>
       <section id="head">
         <mat-card>
-          <mat-card-header>
-            <mat-card-title class="colour-primary header">
-              {{name}}
-            </mat-card-title>
-          </mat-card-header>
+          <mat-card-content fxLayout class="colour-primary header">
+            {{contact.name}}
+            <span fxFlex></span>
+            <a href="{{contact.digital.github}}/resume">View Source</a>
+          </mat-card-content>
         </mat-card>
       </section>
 
-      <section id="contact" fxLayout="row">
+      <section id="contact" fxLayout>
         <mat-card fxFlex="33">
-          <mat-card-header>
-            <mat-card-title>
-              <span>
-                <mat-icon class="colour-primary material-icons">contact_mail</mat-icon>
-              </span>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content fxFlex="80">
-            <p>{{contact.address.addr1}}</p>
-            <p *ngIf="contact.address.addr2">{{contact.address.addr2}}</p>
-            <p>{{contact.address.city}}, {{contact.address.province}}</p>
-            <p>{{contact.address.postal}}</p>
+          <mat-card-content fxLayout>
+            <div fxFlex="20">
+              <mat-icon class="colour-primary header-icon">contact_mail</mat-icon>
+            </div>
+            <div fxFlex>
+              <p>{{contact.address.addr1}}</p>
+              <p *ngIf="contact.address.addr2">{{contact.address.addr2}}</p>
+              <p>{{contact.address.city}}, {{contact.address.province}}</p>
+              <p>{{contact.address.postal}}</p>
+            </div>
           </mat-card-content>
         </mat-card>
         <mat-card fxFlex="33">
-          <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">
-                <mat-icon>contact_phone</mat-icon>
-              </span>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              <mat-icon>phone_in_talk</mat-icon> {{contact.phone.main}}
-            </p>
-            <p>
-              <mat-icon>phone_forwarded</mat-icon> {{contact.phone.alternate}}
-            </p>
+          <mat-card-content fxLayout>
+            <div fxFlex="20">
+              <mat-icon class="colour-primary header-icon">contact_phone</mat-icon>
+            </div>
+            <div fxFlex>
+              <p>
+                <mat-icon>phone_in_talk</mat-icon> {{contact.phone.main}}
+              </p>
+              <p>
+                <mat-icon>phone_forwarded</mat-icon> {{contact.phone.alternate}}
+              </p>
+            </div>
           </mat-card-content>
         </mat-card>
         <mat-card fxFlex="34">
-          <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">
-                <mat-icon>language</mat-icon>
-              </span>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              <mat-icon>mail</mat-icon>
-              {{contact.digital.email}}
-            </p>
-            <p>
-              <mat-icon svgIcon="github"></mat-icon>
-              {{contact.digital.github}}</p>
+          <mat-card-content fxLayout>
+            <div fxFlex="20">
+              <mat-icon class="colour-primary header-icon">language</mat-icon>
+            </div>
+            <div fxFlex>
+              <p>
+                <mat-icon>mail</mat-icon>
+                <a href="{{contact.digital.email}}">{{contact.digital.email}}</a>
+              </p>
+              <p>
+                <img src="../assets/github-circle.svg">
+                <a href="{{contact.digital.github}}">{{contact.digital.github}}</a>
+              </p>
+            </div>
           </mat-card-content>
         </mat-card>
       </section>
 
-      <section id="summary">
-        <mat-card>
+      <section id="about-me" fxLayout>
+        <mat-card fxFlex="50">
           <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">Summary</span>
+            <mat-card-title class="colour-primary">
+              Summary
               <hr/>
             </mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            {{summaryText}}
+            {{aboutMe.summary}}
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex>
+          <mat-card-header>
+            <mat-card-title class="colour-primary">
+              Interests
+              <hr/>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            {{aboutMe.interests}}
           </mat-card-content>
         </mat-card>
       </section>
 
       <section id="skill" fxLayout="row">
-        <mat-card fxFlex="55">
+        <mat-card fxFlex="50">
           <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">Experience</span>
+            <mat-card-title class="colour-primary">
+              Experience
               <hr/>
             </mat-card-title>
           </mat-card-header>
@@ -91,19 +97,19 @@
             <p>{{skillText}}</p>
           </mat-card-content>
         </mat-card>
-        <mat-card fxFlex="45">
+        <mat-card fxFlex="50">
           <mat-card-header>
             <mat-card-title>
               <span class="colour-primary"></span>
             </mat-card-title>
           </mat-card-header>
-          <mat-card-content>
-            <p>
-              <li *ngFor="let skill of skillList">
-                <span class="colour-primary">{{skill.content.title}}</span>
-                <span>: {{skill.content.items.join()}}</span>
-              </li>
-            </p>
+          <mat-card-content class="negate-pad-top">
+            <span *ngFor="let skill of skillList" class="negate-pad-left">
+              <span class="colour-primary skill-header">{{skill.title}}:</span>
+              <p>
+                {{skill.items.join(", ")}}
+              </p>
+            </span>
           </mat-card-content>
         </mat-card>
       </section>
@@ -118,12 +124,12 @@
           </mat-card-header>
           <mat-card-content>
             <div *ngFor="let work of workhistories">
-              <span class="colour-primary item-header">{{work.content.title}} ~ {{work.content.company}}</span>
+              <span class="colour-primary item-header">{{work.title}} ~ {{work.company}}</span>
               <p class="item-header-detail">
-                {{work.content.location}} - {{work.content.dateRange}}
+                {{work.location}} - {{work.dateRange}}
               </p>
-              <p *ngIf="work.content.text">{{work.content.text}}</p>
-              <p *ngIf="work.content.accomplishments">{{work.content.accomplishments}}</p>
+              <p *ngIf="work.text">{{work.text}}</p>
+              <p *ngIf="work.accomplishments">{{work.accomplishments}}</p>
               <br/>
             </div>
           </mat-card-content>
@@ -131,21 +137,23 @@
       </section>
 
       <section id="education">
-        <mat-card *ngFor="let education of educations">
+        <mat-card>
           <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">{{education.content.course}}</span>
-              <p class="section-header-detail">
-                {{education.content.school}} - {{education.content.graduationYear}}
-              </p>
+            <mat-card-title class="colour-primary">
+              Education
+              <hr/>
             </mat-card-title>
           </mat-card-header>
-          <mat-card-content *ngIf="education.content.summary">
-            <div>
-              <span class="colour-primary education-header">{{education.content.course}}</span>
-              <p>
-                {{education.content.summary}}
+          <mat-card-content>
+            <div *ngFor="let education of educations">
+              <span class="colour-primary item-header">{{education.course}}</span>
+              <p class="item-header-detail">
+                {{education.school}} - {{education.graduationYear}}
               </p>
+              <p *ngIf="education.summary">
+                {{education.summary}}
+              </p>
+              <br/>
             </div>
           </mat-card-content>
         </mat-card>
@@ -154,14 +162,16 @@
       <section id="references">
         <mat-card>
           <mat-card-header>
-            <mat-card-title>
-              <span class="colour-primary">References</span>
+            <mat-card-title class="colour-primary">
+              References
               <hr/>
-              <p class="section-header-detail">
-                Available upon request.
-              </p>
             </mat-card-title>
           </mat-card-header>
+          <mat-card-content>
+            <p class="item-header-detail">
+              Available upon request.
+            </p>
+          </mat-card-content>
         </mat-card>
       </section>
     </div>

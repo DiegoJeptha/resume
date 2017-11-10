@@ -8,7 +8,13 @@ export interface WorkhistoryInterface {
 }
 
 export class Workhistory {
-    content: WorkhistoryInterface;
+
+    company: string;
+    title: string;
+    location: string;
+    dateRange: string;
+    text: string;
+    accomplishments: string;
 
     constructor(company: WorkhistoryInterface["company"],
         title: WorkhistoryInterface["title"],
@@ -17,6 +23,6 @@ export class Workhistory {
         text: WorkhistoryInterface["text"],
         accomplishments: WorkhistoryInterface["accomplishments"]) {
 
-        this.content = { company, title, location, dateRange, text, accomplishments };
+        // this.content = { company, title, location, dateRange, text, accomplishments };
     }
 }

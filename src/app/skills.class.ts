@@ -1,12 +1,9 @@
 export interface SkillInterface {
-    title: string;
-    items: string[];
+    skillText: string;
+    skills: SkillListInterface[];
 }
 
-export class Skill {
-    content: SkillInterface;
-
-    constructor(title: SkillInterface["title"], items: SkillInterface["items"]) {
-        this.content = { title, items };
-    }
+export interface SkillListInterface {
+    title: string;
+    items: string[];
 }
