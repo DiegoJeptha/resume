@@ -1,20 +1,20 @@
 {
-    "name": "Ben Zundel",
+    "name": "",
     "address": {
-        "addr1": "25 Goodfellow St.",
+        "addr1": "",
         "addr2": "",
-        "postal": "L1P1C3",
-        "city": "Whitby",
-        "province": "Ontario",
-        "contry": "Canada"
+        "postal": "",
+        "city": "",
+        "province": "",
+        "contry": ""
     },
     "phone": {
-        "main": "905-550-8735",
-        "alternate": "289-600-8136"
+        "main": "",
+        "alternate": ""
     },
     "digital": {
-        "email": "bendzundel@gmail.com",
-        "github": "https://github.com/wildpyro",
-        "website": "homepage"
+        "email": "",
+        "github": "",
+        "website": ""
     }
 }
