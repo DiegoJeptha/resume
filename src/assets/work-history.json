@@ -1,25 +1,25 @@
 [
     {
-        "company": "RPM Technologies",
-        "title": "Technical Lead",
-        "location": "Toronto, Ontario",
-        "dateRange": "2012-present",
-        "text": "I was promoted to the role of Technical Lead at RPM in 2012. Responsibilities include designing and architecting large or core projects, reviewing and approving design documents from other developers, performing code reviews, approving code changes, working with support, QA, and business groups to ensure that business requirements were met on time and with quality, and serve as a client facing subject matter expert and solution architect. My primary role is developing PL/SQL and Java solutions to meet client requirements. I am currently leading the development on a schema conversion process that will move one of the major banks in Canada from a legacy database to a more modern one.",
-        "accomplishments": "Developed coding standards and enforcement through a code review system. Currently a subject matter expert for Register products (RESP, RDSP, TFSA), taxation and mutual fund processing. Quickly advanced to a leadership position in the organization. Completed a twelve month, on - site agreement where responsibilities included developing and training business analysts in developing their own SQL queries."
+        "company": "",
+        "title": "",
+        "location": "",
+        "dateRange": "",
+        "text": "",
+        "accomplishments": ""
     },
     {
-        "company": "RPM Technologies",
-        "title": "Team Lead",
-        "location": "Toronto, Ontario",
-        "dateRange": "2009-2011",
-        "text": "Responsibilities included assigning work to the team, reviewing code and ensuring deadlines were met in addition to individual coding tasks. I also joined a management training group and was responsible for hiring new employees",
-        "accomplishments": "Managed a group of 4 developers. Responsible for managing the RESP and RDSP plan types for Schedule 1 and 2 banks and various brokerages. Became the de-facto subject matter expert for those plan types and was involved in client support and conversion."
+        "company": "",
+        "title": "",
+        "location": "",
+        "dateRange": "",
+        "text": "",
+        "accomplishments": ""
     },
     {
-        "company": "RPM Technologies",
-        "title": "Developer",
-        "location": "Toronto, Ontario",
-        "dateRange": "2006-2009",
+        "company": "",
+        "title": "",
+        "location": "",
+        "dateRange": "",
         "text": "",
         "accomplishments": ""
     }
