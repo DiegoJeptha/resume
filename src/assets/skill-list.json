@@ -1,52 +1,52 @@
 {
-    "skillText": "As a technical lead, I have 10+ years of workhistory working with enterprise Java with an Oracle database. My role at RPM Technologies comprises of technical management, design and development, and mentoring. I've remained current and up to date on trends in Java development and in my spare time I develop projects to stay relevant with modern web development. My present expertise has been to steer the company to service oriented architecture and swtiching to a sign-on authentication model.",
+    "skillText": "",
     "skills": [
         {
             "title": "Languages",
             "items": [
-                "Java",
-                "Javascript",
-                "Typescript",
-                "Python",
-                "PL/SQL",
-                "bash"
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         },
         {
             "title": "Databases",
             "items": [
-                "Oracle PL/SQL",
-                "Mongodb",
-                "MySql",
-                "SQLServer",
-                "SQLite"
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         },
         {
             "title": "Web",
             "items": [
-                "Nodejs",
-                "Angular 1 & 4",
-                "Flask",
-                "Django",
-                "React",
-                "Bootstrap",
-                "JQuery",
-                "SASS",
-                "Bootstrap"
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         },
         {
             "title": "Enterprise",
             "items": [
-                "SVN",
-                "Git",
-                "SOAP",
-                "JAX-RS",
-                "Websphere",
-                "UML",
-                "MQueue",
-                "Rational Suite"
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         }
     ]
