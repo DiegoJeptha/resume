@@ -28,4 +28,4 @@ yarn-error.log
 Thumbs.db
 
 # private content
-./assets/*.json
+src/assets/*.json

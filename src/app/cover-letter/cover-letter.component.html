@@ -1,3 +1,40 @@
-<p>
-  cover-letter works!
-</p>
+<div class="cover" *ngIf="contact">
+  <div fxLayout>
+    <div fxFlex>
+      <section id="contact-name">
+        <span class="colour-primary header">{{contact.name}}</span>
+        <hr/>
+      </section>
+      <div fxFlex="20">
+        <section id="contact-mail" fxLayout>
+          <div class="side-icon" fxFlex="20">
+            <mat-icon class="colour-primary">contact_mail</mat-icon>
+          </div>
+
+          <div fxFlex>
+            {{contact.address.addr1}}
+            <br/>
+            <span *ngIf="contact.address.addr2">{{contact.address.addr2}}
+              <br/>
+            </span>
+            {{contact.address.city}}, {{contact.address.province}}
+            <br/> {{contact.address.postal}}
+            <br/> {{contact.phone.main}}
+            <br/> {{contact.phone.alternate}}
+            <br/> {{contact.digital.email}}
+            <br/> {{contact.digital.github}}
+          </div>
+        </section>
+      </div>
+      <section id="content-panel" fxFlex="80">
+        <p>{{coverLetterContent.greeting}}</p>
+        <p>{{coverLetterContent.para1}}</p>
+        <p>{{coverLetterContent.para2}}</p>
+        <p>{{coverLetterContent.para3}}</p>
+        <p>{{coverLetterContent.para4}}</p>
+        <p>{{coverLetterContent.salutation}}</p>
+        <p>{{coverLetterContent.signature}}</p>
+      </section>
+    </div>
+  </div>
+</div>

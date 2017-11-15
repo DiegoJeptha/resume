@@ -1,0 +1,20 @@
+.header {
+    font-size: 275%;
+    font-style: italic;
+}
+
+.negate-pad-left {
+    margin-left: -20px;
+}
+
+.negate-pad-top {
+    margin-top: -10px;
+}
+
+.cover {
+    font-size: 12pt;
+}
+
+.side-icon {
+    padding-right: 50px;
+}
