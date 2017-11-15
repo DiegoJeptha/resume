@@ -28,4 +28,9 @@ yarn-error.log
 Thumbs.db
 
 # private content
-src/assets/*.json
+src/assets/about-me.json
+src/assets/contact.json
+src/assets/cover-para.json
+src/assets/education.json
+src/assets/skill-list.json
+src/assets/work-history.json
